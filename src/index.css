@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body bg-honey-50 text-honey-900 antialiased;
+  }
+
+  ::selection {
+    @apply bg-honey-300 text-honey-900;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-pad {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-honey-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-honey-500/25 transition hover:bg-honey-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-honey-500;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-honey-300 bg-white/80 px-6 py-3 text-sm font-semibold text-honey-800 backdrop-blur transition hover:bg-honey-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-honey-400;
+  }
+
+  .card {
+    @apply rounded-3xl border border-honey-200/80 bg-white/90 shadow-xl shadow-honey-900/5 backdrop-blur;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-honey-600;
+  }
+}
+
+/* honeycomb background pattern */
+.honeycomb {
+  background-image: radial-gradient(circle at 20% 20%, rgba(245, 185, 33, 0.12), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(224, 160, 21, 0.14), transparent 28%),
+    linear-gradient(180deg, #fff8e6 0%, #fff2cc 45%, #ffe8a3 100%);
+}
+
+.honeycomb-soft {
+  background-image: radial-gradient(rgba(245, 185, 33, 0.08) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
